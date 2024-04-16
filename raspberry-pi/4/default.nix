@@ -17,6 +17,7 @@
     ./tc358743.nix
     ./touch-ft5406.nix
     ./xhci.nix
+    ./hifiberry-dacplus-pro.nix
   ];
 
   boot = {
