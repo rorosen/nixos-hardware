@@ -4,6 +4,7 @@
   imports = [
     ../../../../common/cpu/amd
     ../../../../common/cpu/amd/pstate.nix
+    ../../../../common/cpu/amd/zenpower.nix
     ../../../../common/gpu/amd
     ../../../../common/gpu/nvidia/prime.nix
     ../../../../common/pc/laptop
@@ -21,7 +22,7 @@
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware = {
-    amdgpu.loadInInitrd = lib.mkDefault false;
+    amdgpu.initrd.enable = false;
 
     nvidia = {
       modesetting.enable = lib.mkDefault true;
